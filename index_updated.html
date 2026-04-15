@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="New Dents Unidade Ribeirão Pires - Odontologia especializada com profissionais qualificados, tecnologia moderna e ambiente acolhedor em Ribeirão Pires - SP.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- AOS Library for Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>New Dents Unidade Ribeirão Pires - Odontologia | Ribeirão Pires - SP</title>
+
+    <style>
+:root {
+    /* Colors - Paleta Profissional */
+    --primary-color: #0F172A;
+    --primary-light: #1E293B;
+    --primary-dark: #020617;
+
+    --accent-color: #06D4B8;
+    --accent-dark: #049B8A;
+    --accent-glow: rgba(6, 212, 184, 0.5);
+
+    --text-heading: #0F172A;
+    --text-body: #475569;
+    --text-light: #F8FAFC;
+
+    --background-light: #F1F5F9;
+    --white: #FFFFFF;
+    --border-color: #E2E8F0;
+
+    /* Typography */
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+
+    /* Effects */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-glow: 0 0 20px var(--accent-glow);
+
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-full: 9999px;
+
+    /* Containers */
+    --container-width: 1200px;
+    --header-height: 80px;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-body);
+    background-color: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-heading);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Layout Utilities */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.section-padding {
+    padding: var(--spacing-xl) 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* UI Components */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--white);
+    box-shadow: 0 0 15px rgba(6, 212, 184, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(6, 212, 184, 0.6);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--border-color);
+    color: var(--text-heading);
+}
+
+.btn-outline:hover {
+    border-color: var(--text-heading);
+    background-color: transparent;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(6, 212, 184, 0.1);
+    color: var(--accent-dark);
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--spacing-sm);
+    border: 1px solid rgba(6, 212, 184, 0.2);
+}
+
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--accent-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: gap 0.3s ease;
+}
+
+.link-arrow:hover {
+    gap: 0.5rem;
+    color: var(--accent-color);
+}
+
+/* Header */
+header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 3rem;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: -0.02em;
+    margin-right: auto;
+    padding-left: 1rem;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-menu li a {
+    font-weight: 500;
+    color: var(--text-heading);
+    font-size: 0.95rem;
+}
+
+.nav-menu li a:not(.btn):hover {
+    color: var(--accent-color);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    padding-top: calc(var(--header-height) + var(--spacing-lg));
+    padding-bottom: var(--spacing-lg);
+    background: radial-gradient(circle at top right, rgba(6, 212, 184, 0.08), transparent 40%),
+        radial-gradient(circle at bottom left, rgba(6, 212, 184, 0.08), transparent 40%);
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: -0.02em;
+    background: linear-gradient(120deg, var(--primary-color), var(--accent-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text p {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-body);
+    max-width: 480px;
+}
+
+.cta-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.trust-indicators {
+    display: flex;
+    gap: 2rem;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-light);
+}
+
+.trust-item i {
+    color: #FACC15;
+    font-size: 1.25rem;
+}
+
+.hero-image {
+    position: relative;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    animation: fadeInRight 0.8s ease-out;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Trust & Features Section */
+.trust-section {
+    background-color: var(--white);
+}
+
+.section-header {
+    margin-bottom: var(--spacing-lg);
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-light);
+}
+
+.section-header p {
+    font-size: 1.125rem;
+    color: var(--text-body);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.feature-card {
+    background-color: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -5px rgba(6, 212, 184, 0.15);
+    border-color: var(--accent-color);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(6, 212, 184, 0.1), rgba(6, 212, 184, 0.2));
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--accent-dark);
+    font-size: 2rem;
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* Stats Container - Dark Tech Style */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem;
+    background: linear-gradient(145deg, var(--primary-dark), var(--primary-color));
+    border-radius: var(--radius-lg);
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.stats-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(6, 212, 184, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: transparent;
+    background: linear-gradient(to right, #22d3ee, #06D4B8);
+    -webkit-background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #CBD5E1;
+}
+
+/* Treatments Section - Grey Background */
+.treatments-section {
+    background-color: var(--background-light);
+}
+
+.treatments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.treatment-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.treatment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-color);
+}
+
+.treatment-image {
+    height: 200px;
+    background: linear-gradient(135deg, #CBD5E1, #94A3B8);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.treatment-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.treatment-image i {
+    font-size: 4rem;
+    color: var(--white);
+    opacity: 0.7;
+    z-index: 1;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.treatment-content {
+    padding: 2rem;
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.about-image img {
+    border-radius: var(--radius-lg);
+    box-shadow: 20px 20px 0 rgba(6, 212, 184, 0.1);
+}
+
+.check-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    color: var(--primary-light);
+}
+
+.check-list i {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+}
+
+/* Team Section */
+.team-section {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+    color: var(--white);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(6, 212, 184, 0.3);
+}
+
+.team-image {
+    height: 250px;
+    background: linear-gradient(135deg, #1E293B, #0F172A);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-info {
+    padding: 2rem;
+    text-align: center;
+}
+
+.team-info h3 {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.team-info span {
+    display: block;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.team-info p {
+    font-size: 0.9rem;
+    color: #94A3B8;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: var(--background-light);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.testimonial-name {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.testimonial-rating {
+    color: #FACC15;
+    font-size: 0.9rem;
+}
+
+.testimonial-text {
+    color: var(--text-body);
+    font-style: italic;
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: var(--background-light);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding-bottom: 1rem;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::after {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(6, 212, 184, 0.2) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.cta-box {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-box h2 {
+    color: var(--white);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #0B1120;
+    color: #94A3B8;
+    padding-top: 5rem;
+    border-top: 1px solid #1E293B;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #1E293B;
+}
+
+.footer-col .logo {
+    color: var(--white);
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.footer-col h4 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background-color: #1E293B;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.footer-col ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-col ul li a:hover {
+    color: var(--accent-color);
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-bottom {
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(37, 211, 102, 0.8);
+    }
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128C7E;
+}
+
+/* Responsive Styles */
+@media (max-width: 968px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --spacing-lg: 3rem;
+        --spacing-xl: 5rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 2rem;
+        border-bottom: 1px solid var(--border-color);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5511943416152?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20New%20Dents%20Ribeirão%20Pires." class="whatsapp-float" target="_blank">
+        <i class="ph ph-whatsapp-logo"></i>
+    </a>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">New<span>Dents</span></a>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#tratamentos">Tratamentos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#equipe">Equipe</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="https://wa.me/5511943416152?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20New%20Dents%20Ribeirão%20Pires." class="btn btn-primary">Agendar Consulta</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="ph ph-list"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="inicio">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text" data-aos="fade-right">
+                    <span class="badge">Odontologia Especializada</span>
+                    <h1>Transforme seu sorriso na New Dents.</h1>
+                    <p>Atendimento odontológico especializado com profissionais qualificados, tecnologia moderna e ambiente acolhedor. Localizado em Ribeirão Pires com excelência em cuidados dentários.</p>
+                    <div class="cta-group">
+                        <a href="https://wa.me/5511943416152?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20New%20Dents%20Ribeirão%20Pires." class="btn btn-primary">Agendar Agora</a>
+                        <a href="#tratamentos" class="btn btn-outline">Nossos Serviços</a>
+                    </div>
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <i class="ph ph-star-fill"></i>
+                            4.7 Avaliações (265)
+                        </div>
+                        <div class="trust-item">
+                            <i class="ph ph-clock"></i>
+                            Seg-Sex 9AM-7PM
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="fade-left">
+                    <img src="assets/bannerdentista.png" alt="New Dents - Fachada da Clínica Odontológica">
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Features Section -->
+        <section class="trust-section section-padding">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <span class="badge">Por que escolher a New Dents</span>
+                    <h2>Excelência em Odontologia</h2>
+                    <p>Conheça os diferenciais que nos tornam referência em atendimento odontológico na região de Ribeirão Pires.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box">
+                            <i class="ph ph-stethoscope"></i>
+                        </div>
+                        <h3>Profissionais Qualificados</h3>
+                        <p>Equipe multidisciplinar com especialistas em diversas áreas da odontologia, sempre atualizados com as melhores práticas.</p>
+                    </div>
+
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box">
+                            <i class="ph ph-gear"></i>
+                        </div>
+                        <h3>Tecnologia Moderna</h3>
+                        <p>Equipamentos de última geração para diagnósticos precisos e tratamentos mais rápidos e confortáveis.</p>
+                    </div>
+
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box">
+                            <i class="ph ph-heart"></i>
+                        </div>
+                        <h3>Ambiente Acolhedor</h3>
+                        <p>Estrutura moderna e confortável, eliminando a ansiedade e garantindo uma experiência relaxante.</p>
+                    </div>
+
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon-box">
+                            <i class="ph ph-clock-clockwise"></i>
+                        </div>
+                        <h3>Atendimento Personalizado</h3>
+                        <p>Cada paciente recebe cuidado especial com explicações detalhadas e acompanhamento contínuo.</p>
+                    </div>
+                </div>
+
+                <div class="stats-container" data-aos="zoom-in">
+                    <div class="stat-item">
+                        <div class="stat-number">265</div>
+                        <div class="stat-label">Avaliações Positivas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.7</div>
+                        <div class="stat-label">Classificação Google</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">+10</div>
+                        <div class="stat-label">Anos de Experiência</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Treatments Section -->
+        <section class="treatments-section section-padding" id="tratamentos">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <span class="badge">Nossos Serviços</span>
+                    <h2>Tratamentos Odontológicos Completos</h2>
+                    <p>Oferecemos uma gama completa de serviços odontológicos para toda a família.</p>
+                </div>
+
+                <div class="treatments-grid">
+                    <!-- Card 1 -->
+                    <div class="treatment-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="treatment-image">
+                            <i class="ph ph-tooth"></i>
+                        </div>
+                        <div class="treatment-content">
+                            <h3>Implantes Dentários</h3>
+                            <p>Recupere a função e a estética do seu sorriso com implantes de alta qualidade e carga imediata.</p>
+                            <a href="https://wa.me/5511943416152?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20para%20implante%20dentário.%20Quero%20saber%20mais." class="link-arrow">Agendar Avaliação <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="treatment-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="treatment-image">
+                            <i class="ph ph-brackets-angle"></i>
+                        </div>
+                        <div class="treatment-content">
+                            <h3>Alinhamento Dentário</h3>
+                            <p>Alinhadores transparentes e aparelhos modernos para corrigir seu sorriso com discrição.</p>
+                            <a href="https://wa.me/5511943416152?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20para%20alinhamento%20dentário.%20Quero%20saber%20mais." class="link-arrow">Agendar Avaliação <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="treatment-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="treatment-image">
+                            <i class="ph ph-sparkle"></i>
+                        </div>
+                        <div class="treatment-content">
+                            <h3>Estética Dental</h3>
+                            <p>Lentes de contato dental, facetas e clareamento para um sorriso harmonioso e brilhante.</p>
+                            <a href="https://wa.me/5511943416152?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20para%20estética%20dental.%20Quero%20saber%20mais." class="link-arrow">Agendar Avaliação <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="treatment-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="treatment-image">
+                            <i class="ph ph-first-aid"></i>
+                        </div>
+                        <div class="treatment-content">
+                            <h3>Tratamento de Canal</h3>
+                            <p>Procedimentos precisos e indolores para salvar seu dente com a máxima segurança.</p>
+                            <a href="https://wa.me/5511943416152?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20para%20canal.%20Quero%20saber%20mais." class="link-arrow">Agendar Avaliação <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;" data-aos="fade-up">
+                    <a href="https://wa.me/5511943416152?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20tratamentos%20da%20New%20Dents%20Ribeirão%20Pires." class="btn btn-primary">Ver todos os tratamentos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Institutional / About Section -->
+        <section class="about-section section-padding" id="sobre">
+            <div class="container about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <img src="assets/dentemaua_consultorio.png" alt="Consultório New Dents Odontológica">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <span class="badge">Sobre a New Dents</span>
+    
+                    <h2>Referência em Odontologia em Ribeirão Pires</h2>
+                    <p>A New Dents Unidade Ribeirão Pires é uma clínica odontológica moderna que se destaca pelo atendimento personalizado, tecnologia de ponta e profissionais altamente qualificados. Nosso objetivo é proporcionar a melhor experiência em cuidados dentários, transformando sorrisos e vidas.</p>
+
+                    <ul class="check-list">
+                        <li><i class="ph ph-check-circle"></i> Localização Privilegiada em Ribeirão Pires</li>
+                        <li><i class="ph ph-check-circle"></i> Equipe Multidisciplinar Especializada</li>
+                        <li><i class="ph ph-check-circle"></i> Ambiente Moderno e Acolhedor</li>
+                    </ul>
+
+                    <a href="https://wa.me/5511943416152?text=Olá!%20Quero%20conhecer%20melhor%20a%20New%20Dents%20Ribeirão%20Pires." class="btn btn-primary">Saiba Mais</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team / Doctors Section -->
+        <section class="team-section section-padding" id="equipe">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <span class="badge">Nossa Equipe</span>
+                    <h2 style="color: white;">Especialistas em Cuidado Odontológico</h2>
+                    <p style="color: #94A3B8;">Conheça os profissionais que cuidam da sua saúde com excelência.</p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-card" data-aos="flip-left" data-aos-delay="100">
+                        <div class="team-image">
+                            <img src="assets/dentemaua_consultorio.png" alt="Equipe New Dents em Atendimento">
+                        </div>
+                        <div class="team-info">
+                            <h3>Equipe Especializada</h3>
+                            <span>Profissionais de Excelência</span>
+                            <p>Corpo clínico altamente qualificado em diversas áreas da odontologia.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-card" data-aos="flip-left" data-aos-delay="200">
+                        <div class="team-image">
+                            <img src="assets/dentemaua_recepcao.png" alt="Recepção New Dents">
+                        </div>
+                        <div class="team-info">
+                            <h3>Atendimento Prime</h3>
+                            <span>Recepção Acolhedora</span>
+                            <p>Focados em proporcionar a melhor experiência desde o primeiro contato.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-card" data-aos="flip-left" data-aos-delay="300">
+                        <div class="team-image">
+                            <img src="assets/dentemaua_fachada.png" alt="Fachada New Dents Moderna">
+                        </div>
+                        <div class="team-info">
+                            <h3>Alta Tecnologia</h3>
+                            <span>Equipamentos Modernos</span>
+                            <p>Investimos constantemente em tecnologia para tratamentos mais rápidos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section section-padding" id="depoimentos">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <span class="badge">O que Dizem Sobre Nós</span>
+                    <h2>Depoimentos de Pacientes Satisfeitos</h2>
+                    <p>Veja o que nossos pacientes falam sobre a experiência na New Dents.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">Y</div>
+                            <div>
+                                <div class="testimonial-name">Yasmin Souza</div>
+                                <div class="testimonial-rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Excelente serviço da Bia C. Muito profissional, me senti super relaxada. Ela tem mãos de mágica, mal senti o procedimento!"</p>
+                    </div>
+
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">N</div>
+                            <div>
+                                <div class="testimonial-name">Nataly Almeida</div>
+                                <div class="testimonial-rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Sou paciente da New Dents há vários anos. Fiz 3 canais e comprei meu kit de clareamento. Ambiente excelente e profissionais dedicados!"</p>
+                    </div>
+
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">J</div>
+                            <div>
+                                <div class="testimonial-name">Juliana F</div>
+                                <div class="testimonial-rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Gratidão pelo atendimento desde a recepção. Profissionais excelentes que cuidam muito bem da gente!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container cta-box" data-aos="zoom-out">
+                <h2>Pronto para conquistar o sorriso dos seus sonhos?</h2>
+                <p style="margin-bottom: 2rem;">Agende agora sua avaliação na New Dents Ribeirão Pires e descubra como podemos ajudar você. Atendimento especializado com excelência!</p>
+                <a href="https://wa.me/5511943416152?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20serviços%20da%20New%20Dents%20Ribeirão%20Pires." class="btn btn-primary btn-lg" style="padding: 1rem 2.5rem; font-size: 1.25rem;">Quero saber mais</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="#" class="logo">New<span>Dents</span></a>
+                    <p>Excelência em odontologia em Ribeirão Pires. Atendimento especializado, cuidado, tecnologia e sorrisos transformados.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/newdents.ribeiraopires/" target="_blank"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                        <a href="https://wa.me/5511943416152?text=Olá!%20Quero%20saber%20mais%20sobre%20os%20serviços%20da%20New%20Dents%20Ribeirão%20Pires." target="_blank"><i class="ph ph-whatsapp-logo"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#tratamentos">Tratamentos</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#equipe">Nossa Equipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Tratamentos</h4>
+                    <ul>
+                        <li><a href="#">Implantes</a></li>
+                        <li><a href="#">Alinhamento</a></li>
+                        <li><a href="#">Estética</a></li>
+                        <li><a href="#">Canal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul class="contact-info">
+                        <li><i class="ph ph-map-pin"></i> Av. Kaethe Richers, 28 - Centro, Ribeirão Pires - SP</li>
+                        <li><i class="ph ph-phone"></i> (11) 94341-6152</li>
+                        <li><i class="ph ph-clock-clockwise"></i> Seg-Sex 9AM-7PM | Sáb 9AM-1:30PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 New Dents Unidade Ribeirão Pires - Odontologia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: false,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
